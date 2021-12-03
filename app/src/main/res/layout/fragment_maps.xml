@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map1"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsFragment" >
+    <FrameLayout
+        android:id="@+id/newsheet"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/curvedbg"
+        app:behavior_peekHeight="190dp">
+
+        <ImageView
+            android:id="@+id/arrow1"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_arrow_drop_up_24"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"/>
+        <ListView
+            android:id="@+id/list1"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            tools:listitem="@layout/listitem"
+            >
+
+        </ListView>
+
+    </FrameLayout>
+</RelativeLayout>

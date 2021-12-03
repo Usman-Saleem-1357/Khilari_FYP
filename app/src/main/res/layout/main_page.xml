@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="380dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/logo"
+        android:transitionName="logo_img"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welctxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Welcome"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:transitionName="welcometxt"
+        app:layout_constraintTop_toBottomOf="@+id/logo_img"
+        app:layout_constraintLeft_toLeftOf="@id/logo_img"
+        app:layout_constraintRight_toRightOf="@id/logo_img"/>
+
+    <TextView
+        android:id="@+id/creat_txt"
+        android:transitionName="createnewtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a new account"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/welctxt"
+        app:layout_constraintLeft_toLeftOf="@id/welctxt"
+        app:layout_constraintRight_toRightOf="@id/welctxt"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_login"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button"
+        android:text="Login"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:transitionName="login_btn"
+        app:layout_constraintTop_toBottomOf="@id/creat_txt"
+        app:layout_constraintLeft_toLeftOf="@id/creat_txt"
+        app:layout_constraintRight_toRightOf="@id/creat_txt"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_register"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:text="Register"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:transitionName="register_btn"
+        app:layout_constraintTop_toBottomOf="@id/button_login"
+        app:layout_constraintLeft_toLeftOf="@id/button_login"
+        app:layout_constraintRight_toRightOf="@id/button_login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

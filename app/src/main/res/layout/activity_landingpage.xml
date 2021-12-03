@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LandingPage">
+    <com.google.android.gms.maps.MapView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        android:layout_alignParentTop="true">
+
+    </com.google.android.gms.maps.MapView>
+
+    <FrameLayout
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/curvedbg"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_baseline_arrow_drop_up_24"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"/>
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                tools:listitem="@layout/listitem"
+                >
+
+            </ListView>
+    </FrameLayout>
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cnb_menuResource="@menu/bottom_nav_menu"
+        android:id="@+id/nav_menu"
+        android:background="@drawable/rounded_corners"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        app:cnb_unselectedColor="@color/black">
+
+    </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
